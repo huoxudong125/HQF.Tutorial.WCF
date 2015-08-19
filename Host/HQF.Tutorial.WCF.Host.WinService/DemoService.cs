@@ -24,6 +24,7 @@ namespace HQF.Tutorial.WCF.Host.WinService
             catch (CommunicationObjectFaultedException ex)
             {
                 // TODO: add code to log
+                Console.WriteLine(ex.Message);
             }
         }
 
