@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HQF.Tutorial.WCF.ConsoleClient.CalculatorService {
+namespace HQF.Tutorial.WCF.Client.Console.CalculatorService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -41,12 +41,12 @@ namespace HQF.Tutorial.WCF.ConsoleClient.CalculatorService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CalculatorServiceChannel : HQF.Tutorial.WCF.ConsoleClient.CalculatorService.CalculatorService, System.ServiceModel.IClientChannel {
+    public interface CalculatorServiceChannel : HQF.Tutorial.WCF.Client.Console.CalculatorService.CalculatorService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CalculatorServiceClient : System.ServiceModel.ClientBase<HQF.Tutorial.WCF.ConsoleClient.CalculatorService.CalculatorService>, HQF.Tutorial.WCF.ConsoleClient.CalculatorService.CalculatorService {
+    public partial class CalculatorServiceClient : System.ServiceModel.ClientBase<HQF.Tutorial.WCF.Client.Console.CalculatorService.CalculatorService>, HQF.Tutorial.WCF.Client.Console.CalculatorService.CalculatorService {
         
         public CalculatorServiceClient() {
         }

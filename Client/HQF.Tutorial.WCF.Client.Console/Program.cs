@@ -1,5 +1,5 @@
 ﻿using System;
-using HQF.Tutorial.WCF.ConsoleClient.CalculatorService;
+using HQF.Tutorial.WCF.Client.Console.CalculatorService;
 
 namespace HQF.Tutorial.WCF.ConsoleClient
 {

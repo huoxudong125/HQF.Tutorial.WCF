@@ -7,8 +7,8 @@
     <ProjectGuid>{7F12A05C-FF53-486C-B19B-70AF74EC2FAC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HQF.Tutorial.WCF.ConsoleClient</RootNamespace>
-    <AssemblyName>HQF.Tutorial.WCF.ConsoleClient</AssemblyName>
+    <RootNamespace>HQF.Tutorial.WCF.Client.Console</RootNamespace>
+    <AssemblyName>HQF.Tutorial.WCF.Client.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
