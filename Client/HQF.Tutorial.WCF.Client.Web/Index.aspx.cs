@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.ServiceModel;
 
 namespace HQF.Tutorial.WCF.Client.Web
 {
@@ -11,30 +7,47 @@ namespace HQF.Tutorial.WCF.Client.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            ClientBase<CalculatorService> client = null;
             try
             {
-                using (var proxy = new CalculatorServiceClient())
-                {
-                    Console.WriteLine("x + y = {2} when x = {0} and y = {1}", 1, 2, proxy.Add(1, 2));
-                    Console.WriteLine("x - y = {2} when x = {0} and y = {1}", 1, 2, proxy.Subtract(1, 2));
-                    Console.WriteLine("x * y = {2} when x = {0} and y = {1}", 1, 2, proxy.Multiply(1, 2));
-                    Console.WriteLine("x / y = {2} when x = {0} and y = {1}", 1, 2, proxy.Divide(1, 2));
+                client = new CalculatorServiceClient();
+                var proxy = client as CalculatorServiceClient;
 
-                    Response.Write("Ok.");
-                }
+                Response.Write(string.Format("<br/> x + y = {2} when x = {0} and y = {1}", 1, 2, proxy.Add(1, 2)));
+                Response.Write(string.Format("<br/> x - y = {2} when x = {0} and y = {1}", 1, 2, proxy.Subtract(1, 2)));
+                Response.Write(string.Format("<br/> x * y = {2} when x = {0} and y = {1}", 1, 2, proxy.Multiply(1, 2)));
+                Response.Write(string.Format("<br/> x / y = {2} when x = {0} and y = {1}", 1, 2, proxy.Divide(1, 2)));
+
+                Response.Write("<br/> Ok.");
+            }
+            catch (CommunicationException e1)
+            {
+                if (client != null) client.Abort();
+                Response.Write("Error.\n" + e1.Message);
+            }
+            catch (TimeoutException e2)
+            {
+                if (client != null) client.Abort();
+                Response.Write("Error.\n" + e2.Message);
             }
             catch (Exception ex)
             {
-                Response.Write("Error.");
+                if (client != null) client.Abort();
+                Response.Write("Error.\n" + ex.Message);
                 Console.WriteLine("Error :\n {0}", ex.Message);
             }
-
-            Console.Read();
+            finally
+            {
+                var tempProxy = client as IDisposable;
+                if (tempProxy != null)
+                {
+                    tempProxy.Dispose();
+                }
+            }
         }
     }
 }
