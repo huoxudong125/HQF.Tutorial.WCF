@@ -37,6 +37,15 @@ namespace HQF.Tutorial.WCF.Serializer.XUnitTest
         }
 
         [Fact]
+        public void TestExportSoap()
+        {
+            var soapFile = "sample.soap";
+            WCFSerailizer.ExportSoap(_fixture.CurrentEmployee,soapFile);
+            Assert.True(File.Exists(soapFile));
+        }
+
+
+        [Fact]
         public void TestNetDataContract()
         {
             var fileName = "NetDataContract.xml";

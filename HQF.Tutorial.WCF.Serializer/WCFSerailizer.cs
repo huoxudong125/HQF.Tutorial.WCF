@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Formatters.Soap;
 using System.Runtime.Serialization.Json;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -64,6 +66,19 @@ namespace HQF.Tutorial.WCF.Serializer
                 writer.Close();
             }
         }
+
+        public static void ExportSoapSerializer<T>(T t, string fileName)
+        {
+            using (var fs = new FileStream(fileName, FileMode.Create))
+            {// Construct a SoapFormatter and use it 
+                // to serialize the data to the stream.
+                SoapFormatter formatter = new SoapFormatter();
+           
+                formatter.Serialize(fs, t);
+                fs.Close();
+            }
+        }
+
 
         #endregion Serializer
 
