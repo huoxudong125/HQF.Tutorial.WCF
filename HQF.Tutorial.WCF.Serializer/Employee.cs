@@ -13,6 +13,10 @@ namespace HQF.Tutorial.WCF.Serializer
         private string firstName;
         private string lastName;
 
+        public Employee()
+        {
+        }
+
         public Employee(int employeeID, string firstName, string lastName)
         {
             this.employeeID = employeeID;

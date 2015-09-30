@@ -21,11 +21,37 @@ namespace HQF.Tutorial.WCF.Serializer.XUnitTest
         }
 
         [Fact]
+        public void TestXmlSerialize()
+        {
+            var xmlFile = "sample_xml.xml";
+            WCFSerailizer.ExportXmlSerializer(_fixture.CurrentEmployee,xmlFile);
+            Assert.True(File.Exists(xmlFile));
+        }
+
+        [Fact]
         public void TestNetDataContract()
         {
-            var fileName = "sample.xml";
+            var fileName = "NetDataContract.xml";
             WCFSerailizer.ExportNetDataContractSerializer<Employee>(_fixture.CurrentEmployee,fileName);
             Assert.True(File.Exists(fileName));
         }
+
+        [Fact]
+        public void TestDataContract()
+        {
+            var dataContractFile = "DataContract.xml";
+            WCFSerailizer.ExportDataContract(_fixture.CurrentEmployee,dataContractFile);
+            Assert.True(File.Exists(dataContractFile));
+        }
+
+        [Fact]
+        public void TestDataContractJson()
+        {
+            var josnFile = "DataContractJson.json";
+            WCFSerailizer.ExportDataContractJsonSerilizer(_fixture.CurrentEmployee,josnFile);
+            Assert.True(File.Exists(josnFile));
+        }
+
+
     }
 }
