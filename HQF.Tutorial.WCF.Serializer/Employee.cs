@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 
 namespace HQF.Tutorial.WCF.Serializer
 {
+    [Serializable]
     [DataContract]
     public class Employee
     {

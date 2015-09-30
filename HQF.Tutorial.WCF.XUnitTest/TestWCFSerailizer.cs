@@ -29,10 +29,18 @@ namespace HQF.Tutorial.WCF.Serializer.XUnitTest
         }
 
         [Fact]
+        public void TestBinarySerialize()
+        {
+            var binaryFile = "binary.bin";
+            WCFSerailizer.ExportBinarySerializer(_fixture.CurrentEmployee,binaryFile);
+            Assert.True(File.Exists(binaryFile));
+        }
+
+        [Fact]
         public void TestNetDataContract()
         {
             var fileName = "NetDataContract.xml";
-            WCFSerailizer.ExportNetDataContractSerializer<Employee>(_fixture.CurrentEmployee,fileName);
+            WCFSerailizer.ExportNetDataContractSerializer(_fixture.CurrentEmployee,fileName);
             Assert.True(File.Exists(fileName));
         }
 
