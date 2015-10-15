@@ -40,7 +40,7 @@ namespace HQF.Tutorial.WCF.Serializer.XUnitTest
         public void TestExportSoap()
         {
             var soapFile = "sample.soap";
-            WCFSerailizer.ExportSoap(_fixture.CurrentEmployee,soapFile);
+            WCFSerailizer.ExportSoapSerializer(_fixture.CurrentEmployee,soapFile);
             Assert.True(File.Exists(soapFile));
         }
 

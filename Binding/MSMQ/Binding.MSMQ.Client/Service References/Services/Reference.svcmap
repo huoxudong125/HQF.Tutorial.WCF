@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fe8c16a5-52b7-491a-acbc-21a1874c8d95" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/queuedCalculator/defaultSample" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CalculatorService.wsdl" MetadataType="Wsdl" ID="4b6b7760-8a43-414f-afcd-17c3be6a3c9b" SourceId="1" SourceUrl="http://localhost:8000/queuedCalculator/defaultSample?wsdl" />
+    <MetadataFile FileName="defaultSample.disco" MetadataType="Disco" ID="e73fedbc-a4b1-49fc-985c-035eac700939" SourceId="1" SourceUrl="http://localhost:8000/queuedCalculator/defaultSample?disco" />
+    <MetadataFile FileName="defaultSample.wsdl" MetadataType="Wsdl" ID="7fee245a-fbcb-47ca-bda2-54a7edef305c" SourceId="1" SourceUrl="http://localhost:8000/queuedCalculator/defaultSample?wsdl=wsdl0" />
+    <MetadataFile FileName="defaultSample.xsd" MetadataType="Schema" ID="e7c65f21-2462-4891-ba8f-53f1918e8e0a" SourceId="1" SourceUrl="http://localhost:8000/queuedCalculator/defaultSample?xsd=xsd0" />
+    <MetadataFile FileName="defaultSample1.xsd" MetadataType="Schema" ID="b6b71d5c-5139-4452-b051-438b2394e1bf" SourceId="1" SourceUrl="http://localhost:8000/queuedCalculator/defaultSample?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

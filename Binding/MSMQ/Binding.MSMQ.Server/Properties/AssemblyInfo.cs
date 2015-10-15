@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HQF.Tutorial.WCF.Binding")]
+[assembly: AssemblyTitle("Binding.MSMQ.Server")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HQF.Tutorial.WCF.Binding")]
+[assembly: AssemblyProduct("Binding.MSMQ.Server")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a8660c65-1616-4e5e-b9d9-d046a71b5fc9")]
+[assembly: Guid("46e464cb-1987-4656-ae76-c6f182ca2829")]
 
 // Version information for an assembly consists of the following four values:
 //
