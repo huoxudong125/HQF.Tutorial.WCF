@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Binding.MSMQ.Mail.Common
 {
@@ -6,10 +7,11 @@ namespace Binding.MSMQ.Mail.Common
     {
         public void SubmitMessage(MailMessage message)
         {
-            Console.WriteLine("To: " + message.ToAddress);
-            Console.WriteLine("From: " + message.FromAddress);
-            Console.WriteLine("Subject: " + message.Subject);
-            Console.WriteLine("Body: " + message.Body);
+            var msgStr = string.Format("{0}A mew EMail: {0}To: {1}{0} From:{2}{0} Subject:{3}{0} Body:{4}",
+                Environment.NewLine, message.ToAddress, message.FromAddress, message.Subject, message.Body);
+
+            Console.WriteLine(msgStr);
+            Trace.WriteLine(msgStr);
         }
     }
 }

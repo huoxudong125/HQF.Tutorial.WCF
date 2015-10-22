@@ -18,6 +18,8 @@ This is one of the system-provided bindings provided by Windows Communication Fo
 - [A beginner's guide to queuing with WCF and MSMQ showing bi-directional client correspondance](http://www.codeproject.com/Articles/520323/A-beginners-guide-to-queuing-with-WCF-and-MSMQ-sho)
 - [Creating a WCF Service with MSMQ Communication and Certificate Security](http://www.codeproject.com/Articles/326909/Creating-a-WCF-Service-with-MSMQ-Communication-and)
 
+###MSMQ  Mail
+[Dennis van der Stelt provide a good sample on WCF + MSMQ.](http://bloggingabout.net/blogs/dennis/archive/2008/02/28/wcf-and-msmq.aspx)
 
 ##RabbitMQ
 [RabbitMQ WCF Binding](https://www.rabbitmq.com/dotnet-api-guide.html)
