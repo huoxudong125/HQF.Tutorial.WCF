@@ -8,6 +8,7 @@ namespace Routing.Common
 {
     public class ComplexNumberCalculator : IComplexNumber
     {
+        private string OutputStrFormat = "Invoked ComplexNumberCalculator Operation:";
         public Complex Add(Complex x, Complex y)
         {
             Console.WriteLine("Invoked ComplexNumberCalculator Operation: Add");

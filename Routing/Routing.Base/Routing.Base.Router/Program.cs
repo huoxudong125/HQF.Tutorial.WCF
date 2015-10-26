@@ -19,7 +19,7 @@ namespace Routing.Base.Router
             {
                 host.Open();
                 PrintServiceInfo(host);
-              
+                Console.ReadKey();
                 host.Close();
             }
             catch (Exception ex)
@@ -28,7 +28,7 @@ namespace Routing.Base.Router
                 host.Abort();
             }
 
-            Console.ReadKey();
+           
         }
 
         static void PrintServiceInfo(ServiceHost host)
