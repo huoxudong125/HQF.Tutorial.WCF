@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82F53C43-841F-4879-86DD-562D732413EA}</ProjectGuid>
+    <ProjectGuid>{842C1AEF-40A6-425F-B332-FE307D8F1CE6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Routing.Version.Router</RootNamespace>
-    <AssemblyName>Routing.Version.Router</AssemblyName>
+    <RootNamespace>Routing.Version.ClientV2</RootNamespace>
+    <AssemblyName>Routing.Version.ClientV2</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,7 +36,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.Routing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Routing.Version.CommonExtend\Routing.Version.CommonExtend.csproj">
+      <Project>{7fe2ec3a-ca7f-4521-8982-2d94d594db40}</Project>
+      <Name>Routing.Version.CommonExtend</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
