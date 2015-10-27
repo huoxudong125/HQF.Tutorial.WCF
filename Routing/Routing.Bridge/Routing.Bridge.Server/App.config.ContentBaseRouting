@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.1" />
+    </startup>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="">
+          <serviceMetadata />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <services>
+      <service name="CalculatorService.ComplexNumberCalculator">
+        <endpoint address="" binding="basicHttpBinding" contract="CalculatorService.IComplexNumber" />
+        <endpoint address="binary" binding="basicHttpBinding" contract="CalculatorService.IBinaryOperation" />
+        <endpoint address="unary" binding="basicHttpBinding" contract="CalculatorService.IUnaryOperation" />
+        <endpoint address="mex" kind="mexEndpoint" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8081/ComplexNumberService" />
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+  </system.serviceModel>
+</configuration>

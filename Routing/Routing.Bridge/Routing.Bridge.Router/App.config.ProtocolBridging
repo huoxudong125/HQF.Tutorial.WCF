@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+    <system.serviceModel>
+      <client>
+        <endpoint address="soap.udp://224.1.1.1:40000/ComplexNumberService/udp" binding="udpBinding"
+                  contract="*" name="AllOperation" />
+        <endpoint address="net.tcp://localhost:8081/ComplexNumberService/tcp" binding="netTcpBinding"
+                  contract="*" name="BinaryOperation" />
+        <endpoint address="net.pipe://localhost/ComplexNumberService/pipe" binding="netNamedPipeBinding"
+                  contract="*" name="UnaryOperation" />
+      </client>
+      <routing>
+        <filters>
+          <filter name="AllOperationFilter" filterType="EndpointAddress" filterData="http://localhost:8080/RoutingService/Router/all" />
+          <filter name="BinaryOperationFilter" filterType="EndpointAddress" filterData="http://localhost:8080/RoutingService/Router/binary" />
+          <filter name="UnaryOperationFilter" filterType="EndpointAddress" filterData="http://localhost:8080/RoutingService/Router/unary" />
+        </filters>
+        <filterTables>
+          <filterTable name="RoutingTable">
+            <add filterName="AllOperationFilter" endpointName="AllOperation" />
+            <add filterName="BinaryOperationFilter" endpointName="BinaryOperation" />
+            <add filterName="UnaryOperationFilter" endpointName="UnaryOperation" />
+          </filterTable>
+        </filterTables>
+      </routing>
+      <behaviors>
+        <serviceBehaviors>
+          <behavior name="">
+            <routing filterTableName="RoutingTable" />
+          </behavior>
+        </serviceBehaviors>
+      </behaviors>
+        <services>
+            <service name="System.ServiceModel.Routing.RoutingService">
+              <endpoint address="all" binding="basicHttpBinding"
+                        contract="System.ServiceModel.Routing.IRequestReplyRouter" name="All" />
+              <endpoint address="binary" binding="basicHttpBinding"
+                       contract="System.ServiceModel.Routing.IRequestReplyRouter" name="Binary" />
+              <endpoint address="unary" binding="basicHttpBinding"
+                       contract="System.ServiceModel.Routing.IRequestReplyRouter" name="Unary" />
+              <host>
+                    <baseAddresses>
+                        <add baseAddress="http://localhost:8080/RoutingService/Router" />
+                    </baseAddresses>
+                </host>
+            </service>
+        </services>
+    </system.serviceModel>
+</configuration>

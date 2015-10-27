@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Routing.Common
+namespace Routing.Bridge.Common
 {
     [DataContract]
     public class Complex
@@ -16,5 +16,4 @@ namespace Routing.Common
         [DataMember]
         public double Imaginary;
     }
-
 }
