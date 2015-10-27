@@ -5,7 +5,7 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Text;
 using System.Threading.Tasks;
-using Routing.Common;
+using Routing.Base.Common;
 
 namespace Routing.Base.Server
 {

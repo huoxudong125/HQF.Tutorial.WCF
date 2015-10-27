@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using Routing.Common;
+using Routing.Base.Common;
 
 namespace Routing.Base.Client
 {

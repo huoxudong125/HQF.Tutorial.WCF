@@ -55,9 +55,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Routing.Common\Routing.Common.csproj">
+    <ProjectReference Include="..\Routing.Base.Common\Routing.Base.Common.csproj">
       <Project>{4112a4db-77f8-430a-bb4a-0ceef59fe252}</Project>
-      <Name>Routing.Common</Name>
+      <Name>Routing.Base.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

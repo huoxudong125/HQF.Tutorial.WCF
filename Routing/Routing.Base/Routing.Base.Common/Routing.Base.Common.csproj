@@ -7,8 +7,8 @@
     <ProjectGuid>{4112A4DB-77F8-430A-BB4A-0CEEF59FE252}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Routing.Common</RootNamespace>
-    <AssemblyName>Routing.Common</AssemblyName>
+    <RootNamespace>Routing.Base.Common</RootNamespace>
+    <AssemblyName>Routing.Base.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
