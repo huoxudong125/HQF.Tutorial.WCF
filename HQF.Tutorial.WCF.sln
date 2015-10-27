@@ -88,6 +88,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Route
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.MessageFilters", "Routing\Routing.LoadBalancing\Routing.LoadBalancing.MessageFilters\Routing.LoadBalancing.MessageFilters.csproj", "{D1CD3B35-6858-4DAD-937C-56E652DCA502}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing.Multicast", "Routing.Multicast", "{02CC594B-1CB7-473C-AD8D-98ADA1B8212D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Common", "Routing\Routing.Multicast\Routing.Multicast.Common\Routing.Multicast.Common.csproj", "{C2F16532-2C51-4FB2-AB75-5AAEBA0CD868}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Client", "Routing\Routing.Multicast\Routing.Multicast.Client\Routing.Multicast.Client.csproj", "{DBA15D2B-D44B-41C8-A2BB-88B4E54C0937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Server", "Routing\Routing.Multicast\Routing.Multicast.Server\Routing.Multicast.Server.csproj", "{0956DE39-88C1-4D9C-B9DD-A53C6D518F19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Router", "Routing\Routing.Multicast\Routing.Multicast.Router\Routing.Multicast.Router.csproj", "{511C3254-093E-4504-A403-8D443CBB6EEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -214,6 +224,22 @@ Global
 		{D1CD3B35-6858-4DAD-937C-56E652DCA502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1CD3B35-6858-4DAD-937C-56E652DCA502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1CD3B35-6858-4DAD-937C-56E652DCA502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2F16532-2C51-4FB2-AB75-5AAEBA0CD868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F16532-2C51-4FB2-AB75-5AAEBA0CD868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F16532-2C51-4FB2-AB75-5AAEBA0CD868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F16532-2C51-4FB2-AB75-5AAEBA0CD868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA15D2B-D44B-41C8-A2BB-88B4E54C0937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA15D2B-D44B-41C8-A2BB-88B4E54C0937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA15D2B-D44B-41C8-A2BB-88B4E54C0937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA15D2B-D44B-41C8-A2BB-88B4E54C0937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0956DE39-88C1-4D9C-B9DD-A53C6D518F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0956DE39-88C1-4D9C-B9DD-A53C6D518F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0956DE39-88C1-4D9C-B9DD-A53C6D518F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0956DE39-88C1-4D9C-B9DD-A53C6D518F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{511C3254-093E-4504-A403-8D443CBB6EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511C3254-093E-4504-A403-8D443CBB6EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511C3254-093E-4504-A403-8D443CBB6EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511C3254-093E-4504-A403-8D443CBB6EEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -254,5 +280,10 @@ Global
 		{A0B02334-91C8-4178-87A0-3F8F5784DDB1} = {A091F670-610C-4FAA-9417-FBA46B611FB4}
 		{A7815C9D-87F5-404A-B6BB-D6C6481517D5} = {A091F670-610C-4FAA-9417-FBA46B611FB4}
 		{D1CD3B35-6858-4DAD-937C-56E652DCA502} = {A091F670-610C-4FAA-9417-FBA46B611FB4}
+		{02CC594B-1CB7-473C-AD8D-98ADA1B8212D} = {A873E11B-80BD-42BB-8DB3-CC587573ABA5}
+		{C2F16532-2C51-4FB2-AB75-5AAEBA0CD868} = {02CC594B-1CB7-473C-AD8D-98ADA1B8212D}
+		{DBA15D2B-D44B-41C8-A2BB-88B4E54C0937} = {02CC594B-1CB7-473C-AD8D-98ADA1B8212D}
+		{0956DE39-88C1-4D9C-B9DD-A53C6D518F19} = {02CC594B-1CB7-473C-AD8D-98ADA1B8212D}
+		{511C3254-093E-4504-A403-8D443CBB6EEC} = {02CC594B-1CB7-473C-AD8D-98ADA1B8212D}
 	EndGlobalSection
 EndGlobal
