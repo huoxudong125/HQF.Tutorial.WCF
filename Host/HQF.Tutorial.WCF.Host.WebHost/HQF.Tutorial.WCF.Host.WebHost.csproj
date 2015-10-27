@@ -86,11 +86,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\HQF.Tutorial.WCF.Contract.Interface\HQF.Tutorial.WCF.Contract.Interface.csproj">
+    <ProjectReference Include="..\..\Common\HQF.Tutorial.WCF.Contract.Interface\HQF.Tutorial.WCF.Contract.Interface.csproj">
       <Project>{40672f0b-0596-4edb-bce2-263036cdf219}</Project>
       <Name>HQF.Tutorial.WCF.Contract.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\HQF.Tutorial.WCF.Contract\HQF.Tutorial.WCF.Contract.csproj">
+    <ProjectReference Include="..\..\Common\HQF.Tutorial.WCF.Contract\HQF.Tutorial.WCF.Contract.csproj">
       <Project>{8fc09188-486b-494a-bfe5-82a89f68ef4d}</Project>
       <Name>HQF.Tutorial.WCF.Contract</Name>
     </ProjectReference>

@@ -66,12 +66,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\HQF.Tutorial.WCF.Contract.Interface\HQF.Tutorial.WCF.Contract.Interface.csproj">
-      <Project>{40672f0b-0596-4edb-bce2-263036cdf219}</Project>
-      <Name>HQF.Tutorial.WCF.Contract.Interface</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
