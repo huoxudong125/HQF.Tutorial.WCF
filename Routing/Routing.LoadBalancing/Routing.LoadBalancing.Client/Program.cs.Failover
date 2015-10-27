@@ -1,0 +1,63 @@
+﻿using CalculatorService;
+using System;
+using System.ServiceModel;
+
+namespace Routing.LoadBalancing.Client
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var cfBinary = new ChannelFactory<IBinaryOperation>("BasicHttpBinding_IBinaryOperationr");
+
+            var channelBinary = cfBinary.CreateChannel();
+
+            var z1 = new Complex();
+            var z2 = new Complex();
+
+            z1.Real = 3D;
+            z1.Imaginary = 4D;
+
+            z2.Real = 1D;
+            z2.Imaginary = -2D;
+
+            Console.WriteLine("*** Protocol Bridging ***\n");
+            Console.WriteLine("\nPlease hit any key to run OR enter 'exit' to exit.");
+            string command = Console.ReadLine();
+
+            while (command != "exit")
+            {
+                Console.WriteLine("Please hit any key to start- ");
+                Console.ReadLine();
+                ComplexNumberBinaryArithmetics(channelBinary, z1, z2);
+
+                Console.WriteLine("\nPlease hit any key to re-run OR enter 'exit' to exit.");
+                command = Console.ReadLine();
+            }
+
+            ((IClientChannel)channelBinary).Close();
+        }
+
+        static string f(Complex z)
+        {
+            return (String.Format("({0}, {1})", z.Real, z.Imaginary));
+        }
+
+        static void ComplexNumberBinaryArithmetics(IBinaryOperation channel, Complex z1, Complex z2)
+        {
+            try
+            {
+                Console.WriteLine("\n*** Complex Number Binary Arithmetics ***\n");
+
+                Console.WriteLine("{0} + {1} = {2}", f(z1), f(z2), f(channel.Add(z1, z2)));
+                Console.WriteLine("{0} - {1} = {2}", f(z1), f(z2), f(channel.Subtract(z1, z2)));
+                Console.WriteLine("{0} * {1} = {2}", f(z1), f(z2), f(channel.Multiply(z1, z2)));
+                Console.WriteLine("{0} / {1} = {2}", f(z1), f(z2), f(channel.Divide(z1, z2)));
+            }
+            catch (Exception fx)
+            {
+                Console.WriteLine(fx.Message);
+            }
+        }
+    }
+}

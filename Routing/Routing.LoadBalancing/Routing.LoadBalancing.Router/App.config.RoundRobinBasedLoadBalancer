@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+    <system.serviceModel>
+      <client>
+        <endpoint address="http://localhost:8081/ComplexNumberCalculator1" binding="basicHttpBinding"
+                  contract="*" name="firstInstance" />
+        <endpoint address="http://localhost:8081/ComplexNumberCalculator2" binding="basicHttpBinding"
+                  contract="*" name="secondInstance" />
+        <endpoint address="http://localhost:8081/ComplexNumberCalculator3" binding="basicHttpBinding"
+                  contract="*" name="thirdInstance" />
+      </client>
+      <routing>
+        <filters>
+          <filter name="roundRobinContractFilter1" filterType="Custom" customType="Routing.LoadBalancing.MessageFilters.RoundRobinMessageFilter, Routing.LoadBalancing.MessageFilters" filterData="roundRobinGroup"/>
+          <filter name="roundRobinContractFilter2" filterType="Custom" customType="Routing.LoadBalancing.MessageFilters.RoundRobinMessageFilter, Routing.LoadBalancing.MessageFilters" filterData="roundRobinGroup"/>
+          <filter name="roundRobinContractFilter3" filterType="Custom" customType="Routing.LoadBalancing.MessageFilters.RoundRobinMessageFilter, Routing.LoadBalancing.MessageFilters" filterData="roundRobinGroup"/>
+        </filters>
+        <filterTables>
+          <filterTable name="RoutingTable">
+            <add filterName="roundRobinContractFilter1" endpointName="firstInstance"/>
+            <add filterName="roundRobinContractFilter2" endpointName="secondInstance"/>
+            <add filterName="roundRobinContractFilter3" endpointName="thirdInstance"/>
+          </filterTable>
+        </filterTables>
+      </routing>
+      <behaviors>
+        <serviceBehaviors>
+          <behavior name="">
+            <routing filterTableName="RoutingTable" />
+          </behavior>
+        </serviceBehaviors>
+      </behaviors>
+        <services>
+            <service name="System.ServiceModel.Routing.RoutingService">
+              <endpoint address="" binding="basicHttpBinding"
+                       contract="System.ServiceModel.Routing.IRequestReplyRouter" name="VirtualEndpoint" />
+                <host>
+                    <baseAddresses>
+                        <add baseAddress="http://localhost:8080/RoutingService/Router" />
+                    </baseAddresses>
+                </host>
+            </service>
+        </services>
+    </system.serviceModel>
+</configuration>

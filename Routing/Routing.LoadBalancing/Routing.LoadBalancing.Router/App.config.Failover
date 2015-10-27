@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+    <system.serviceModel>
+      <client>
+        <endpoint address="http://localhost:8081/ComplexNumberCalculator1/binary" binding="basicHttpBinding"
+                  contract="*" name="BinaryOperation1" />
+        <endpoint address="http://localhost:8081/ComplexNumberCalculator2/binary" binding="basicHttpBinding"
+                  contract="*" name="BinaryOperation2" />
+        <endpoint address="http://localhost:8081/ComplexNumberCalculator3/binary" binding="basicHttpBinding"
+                  contract="*" name="BinaryOperation3" />
+      </client>
+      <routing>
+        <filters>
+          <filter name="BinaryOperationFilter" filterType="MatchAll" />
+        </filters>
+        <filterTables>
+          <filterTable name="RoutingTable">
+            <add filterName="BinaryOperationFilter" endpointName="BinaryOperation1" backupList="BackUps" />
+          </filterTable>
+        </filterTables>
+        <backupLists>
+          <backupList name="BackUps">
+            <add endpointName="BinaryOperation2"/>
+            <add endpointName="BinaryOperation3" />
+          </backupList>
+        </backupLists>
+      </routing>
+      <behaviors>
+        <serviceBehaviors>
+          <behavior name="">
+            <routing filterTableName="RoutingTable" />
+          </behavior>
+        </serviceBehaviors>
+      </behaviors>
+        <services>
+            <service name="System.ServiceModel.Routing.RoutingService">
+              <endpoint address="binary" binding="basicHttpBinding"
+                       contract="System.ServiceModel.Routing.IRequestReplyRouter" name="VirtualEndpoint" />
+                <host>
+                    <baseAddresses>
+                        <add baseAddress="http://localhost:8080/RoutingService/Router" />
+                    </baseAddresses>
+                </host>
+            </service>
+        </services>
+    </system.serviceModel>
+</configuration>
