@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binding", "Binding", "{6EC494D6-0405-4C3B-8DFD-4BE1AD77235C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Binding", "3.Binding", "{6EC494D6-0405-4C3B-8DFD-4BE1AD77235C}"
 	ProjectSection(SolutionItems) = preProject
 		Binding\Readme.md = Binding\Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{CBF3FA5F-5DEC-42A2-A090-71E46139B16A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Common", "0.Common", "{CBF3FA5F-5DEC-42A2-A090-71E46139B16A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Contract.Interface", "HQF.Tutorial.WCF.Contract.Interface\HQF.Tutorial.WCF.Contract.Interface.csproj", "{40672F0B-0596-4EDB-BCE2-263036CDF219}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Contract", "HQF.Tutorial.WCF.Contract\HQF.Tutorial.WCF.Contract.csproj", "{8FC09188-486B-494A-BFE5-82A89F68EF4D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{540004B9-4978-4077-9393-C06A6FD61C65}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Host", "2.Host", "{540004B9-4978-4077-9393-C06A6FD61C65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.ConsoleHost", "Host\HQF.Tutorial.WCF.Console\HQF.Tutorial.WCF.ConsoleHost.csproj", "{7E666593-81F2-4868-AC31-76887149F6EC}"
 EndProject
@@ -24,13 +24,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Host.WinSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Host.WebHost", "Host\HQF.Tutorial.WCF.Host.WebHost\HQF.Tutorial.WCF.Host.WebHost.csproj", "{B2207D2C-59F2-4311-8732-1FA4F81BB29B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{A7061D33-CB29-4BBF-8BEE-F1C73ECB84F1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Client", "1.Client", "{A7061D33-CB29-4BBF-8BEE-F1C73ECB84F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Client.Web", "Client\HQF.Tutorial.WCF.Client.Web\HQF.Tutorial.WCF.Client.Web.csproj", "{961D5E0F-BA1B-4450-9483-2945127A5646}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Client.Console", "Client\HQF.Tutorial.WCF.Client.Console\HQF.Tutorial.WCF.Client.Console.csproj", "{7F12A05C-FF53-486C-B19B-70AF74EC2FAC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialize", "Serialize", "{A41CF768-F339-4CA4-AA23-1CD5CBA9A9A7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Serializer", "4.Serializer", "{A41CF768-F339-4CA4-AA23-1CD5CBA9A9A7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSMQ", "MSMQ", "{8494784E-FDEF-45E7-B248-083898F61EFB}"
 EndProject
@@ -50,7 +50,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Client.WP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Server.WinService", "Binding\MSMQ_Mail\Binding.MSMQ.Mail.Server.WinService\Binding.MSMQ.Mail.Server.WinService.csproj", "{4A5D774B-5FCB-46B9-A3CB-104509D3C566}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing", "Routing", "{A873E11B-80BD-42BB-8DB3-CC587573ABA5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Routing", "5.Routing", "{A873E11B-80BD-42BB-8DB3-CC587573ABA5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing.Base", "Routing.Base", "{1489C915-C013-426C-B905-82B084319282}"
 EndProject
