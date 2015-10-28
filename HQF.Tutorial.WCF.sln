@@ -5,125 +5,128 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Binding", "3.Binding", "{6EC494D6-0405-4C3B-8DFD-4BE1AD77235C}"
 	ProjectSection(SolutionItems) = preProject
-		Binding\Readme.md = Binding\Readme.md
+		Src\Binding\Readme.md = Src\Binding\Readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Common", "0.Common", "{CBF3FA5F-5DEC-42A2-A090-71E46139B16A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Host", "2.Host", "{540004B9-4978-4077-9393-C06A6FD61C65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.ConsoleHost", "Host\HQF.Tutorial.WCF.Console\HQF.Tutorial.WCF.ConsoleHost.csproj", "{7E666593-81F2-4868-AC31-76887149F6EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.ConsoleHost", "Src\Host\HQF.Tutorial.WCF.Console\HQF.Tutorial.WCF.ConsoleHost.csproj", "{7E666593-81F2-4868-AC31-76887149F6EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Host.WinForm", "Host\HQF.Tutorial.WCF.Host.WinForm\HQF.Tutorial.WCF.Host.WinForm.csproj", "{18B5815F-3954-4899-849F-109E3FBE070E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Host.WinForm", "Src\Host\HQF.Tutorial.WCF.Host.WinForm\HQF.Tutorial.WCF.Host.WinForm.csproj", "{18B5815F-3954-4899-849F-109E3FBE070E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Host.WinService", "Host\HQF.Tutorial.WCF.Host.WinService\HQF.Tutorial.WCF.Host.WinService.csproj", "{CAA5D804-B776-4B74-B6C2-7516164E1B5A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Host.WebHost", "Host\HQF.Tutorial.WCF.Host.WebHost\HQF.Tutorial.WCF.Host.WebHost.csproj", "{B2207D2C-59F2-4311-8732-1FA4F81BB29B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Host.WinService", "Src\Host\HQF.Tutorial.WCF.Host.WinService\HQF.Tutorial.WCF.Host.WinService.csproj", "{CAA5D804-B776-4B74-B6C2-7516164E1B5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Client", "1.Client", "{A7061D33-CB29-4BBF-8BEE-F1C73ECB84F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Client.Web", "Client\HQF.Tutorial.WCF.Client.Web\HQF.Tutorial.WCF.Client.Web.csproj", "{961D5E0F-BA1B-4450-9483-2945127A5646}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Client.Console", "Client\HQF.Tutorial.WCF.Client.Console\HQF.Tutorial.WCF.Client.Console.csproj", "{7F12A05C-FF53-486C-B19B-70AF74EC2FAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Client.Console", "Src\Client\HQF.Tutorial.WCF.Client.Console\HQF.Tutorial.WCF.Client.Console.csproj", "{7F12A05C-FF53-486C-B19B-70AF74EC2FAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Serializer", "4.Serializer", "{A41CF768-F339-4CA4-AA23-1CD5CBA9A9A7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSMQ", "MSMQ", "{8494784E-FDEF-45E7-B248-083898F61EFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Common", "Binding\MSMQ\Binding.MSMQ.Common\Binding.MSMQ.Common.csproj", "{6DB80714-B92C-4912-BE7D-494DFDE24356}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Common", "Src\Binding\MSMQ\Binding.MSMQ.Common\Binding.MSMQ.Common.csproj", "{6DB80714-B92C-4912-BE7D-494DFDE24356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Client", "Binding\MSMQ\Binding.MSMQ.Client\Binding.MSMQ.Client.csproj", "{CAE99046-2C5A-4E5D-8569-6AEF992D04D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Client", "Src\Binding\MSMQ\Binding.MSMQ.Client\Binding.MSMQ.Client.csproj", "{CAE99046-2C5A-4E5D-8569-6AEF992D04D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Server", "Binding\MSMQ\Binding.MSMQ.Server\Binding.MSMQ.Server.csproj", "{46E464CB-1987-4656-AE76-C6F182CA2829}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Server", "Src\Binding\MSMQ\Binding.MSMQ.Server\Binding.MSMQ.Server.csproj", "{46E464CB-1987-4656-AE76-C6F182CA2829}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSMQ_Mail", "MSMQ_Mail", "{D71E6D21-CE2E-459F-ABCC-B7E174B12CCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Server", "Binding\MSMQ_Mail\Binding.MSMQ.Mail.Server\Binding.MSMQ.Mail.Server.csproj", "{9CBFCC71-0B0C-4FCF-A426-1090EA5E8091}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Server", "Src\Binding\MSMQ_Mail\Binding.MSMQ.Mail.Server\Binding.MSMQ.Mail.Server.csproj", "{9CBFCC71-0B0C-4FCF-A426-1090EA5E8091}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Common", "Binding\MSMQ_Mail\Binding.MSMQ.Mail.Common\Binding.MSMQ.Mail.Common.csproj", "{252C37DE-D614-457B-9748-D10ABDA8A239}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Common", "Src\Binding\MSMQ_Mail\Binding.MSMQ.Mail.Common\Binding.MSMQ.Mail.Common.csproj", "{252C37DE-D614-457B-9748-D10ABDA8A239}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Client.WPF", "Binding\MSMQ_Mail\Binding.MSMQ.Mail.Client.WPF\Binding.MSMQ.Mail.Client.WPF.csproj", "{7A797BEC-0274-4042-AF7C-7C5036ED11BA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Server.WinService", "Binding\MSMQ_Mail\Binding.MSMQ.Mail.Server.WinService\Binding.MSMQ.Mail.Server.WinService.csproj", "{4A5D774B-5FCB-46B9-A3CB-104509D3C566}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Server.WinService", "Src\Binding\MSMQ_Mail\Binding.MSMQ.Mail.Server.WinService\Binding.MSMQ.Mail.Server.WinService.csproj", "{4A5D774B-5FCB-46B9-A3CB-104509D3C566}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Routing", "5.Routing", "{A873E11B-80BD-42BB-8DB3-CC587573ABA5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing.Base", "Routing.Base", "{1489C915-C013-426C-B905-82B084319282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Base.Server", "Routing\Routing.Base\Routing.Base.Server\Routing.Base.Server.csproj", "{F8C98B04-2014-4C62-BCC8-9C5CFD86F8E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Base.Server", "Src\Routing\Routing.Base\Routing.Base.Server\Routing.Base.Server.csproj", "{F8C98B04-2014-4C62-BCC8-9C5CFD86F8E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Base.Client", "Routing\Routing.Base\Routing.Base.Client\Routing.Base.Client.csproj", "{72061449-98DF-4941-A5C7-4179A084E7D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Base.Client", "Src\Routing\Routing.Base\Routing.Base.Client\Routing.Base.Client.csproj", "{72061449-98DF-4941-A5C7-4179A084E7D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Base.Router", "Routing\Routing.Base\Routing.Base.Router\Routing.Base.Router.csproj", "{51984960-292B-4270-80A3-F8434CEA30EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Base.Router", "Src\Routing\Routing.Base\Routing.Base.Router\Routing.Base.Router.csproj", "{51984960-292B-4270-80A3-F8434CEA30EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing.Bridge", "Routing.Bridge", "{9159B3FF-1FF4-4980-B656-18E1C76CED3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Bridge.Common", "Routing\Routing.Bridge\Routing.Bridge.Common\Routing.Bridge.Common.csproj", "{224A1EB2-433C-406D-B1E9-BC5845D717AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Bridge.Common", "Src\Routing\Routing.Bridge\Routing.Bridge.Common\Routing.Bridge.Common.csproj", "{224A1EB2-433C-406D-B1E9-BC5845D717AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Bridge.Server", "Routing\Routing.Bridge\Routing.Bridge.Server\Routing.Bridge.Server.csproj", "{7B11811E-6E95-42F1-A00B-9551BC89BC25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Bridge.Server", "Src\Routing\Routing.Bridge\Routing.Bridge.Server\Routing.Bridge.Server.csproj", "{7B11811E-6E95-42F1-A00B-9551BC89BC25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Bridge.Client", "Routing\Routing.Bridge\Routing.Bridge.Client\Routing.Bridge.Client.csproj", "{4900BA28-4913-4C95-9767-D0D24D38C1FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Bridge.Client", "Src\Routing\Routing.Bridge\Routing.Bridge.Client\Routing.Bridge.Client.csproj", "{4900BA28-4913-4C95-9767-D0D24D38C1FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Bridge.Router", "Routing\Routing.Bridge\Routing.Bridge.Router\Routing.Bridge.Router.csproj", "{3D3351A0-41D2-4C33-87FD-B5434B6FAEED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Bridge.Router", "Src\Routing\Routing.Bridge\Routing.Bridge.Router\Routing.Bridge.Router.csproj", "{3D3351A0-41D2-4C33-87FD-B5434B6FAEED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Base.Common", "Routing\Routing.Base\Routing.Base.Common\Routing.Base.Common.csproj", "{4112A4DB-77F8-430A-BB4A-0CEEF59FE252}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Base.Common", "Src\Routing\Routing.Base\Routing.Base.Common\Routing.Base.Common.csproj", "{4112A4DB-77F8-430A-BB4A-0CEEF59FE252}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing.LoadBalancing", "Routing.LoadBalancing", "{A091F670-610C-4FAA-9417-FBA46B611FB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Common", "Routing\Routing.LoadBalancing\Routing.LoadBalancing.Common\Routing.LoadBalancing.Common.csproj", "{CD51CD91-348C-4477-A682-2FC08AA715CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Common", "Src\Routing\Routing.LoadBalancing\Routing.LoadBalancing.Common\Routing.LoadBalancing.Common.csproj", "{CD51CD91-348C-4477-A682-2FC08AA715CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Client", "Routing\Routing.LoadBalancing\Routing.LoadBalancing.Client\Routing.LoadBalancing.Client.csproj", "{CF465F90-0953-473B-BF05-CDF7B7281091}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Client", "Src\Routing\Routing.LoadBalancing\Routing.LoadBalancing.Client\Routing.LoadBalancing.Client.csproj", "{CF465F90-0953-473B-BF05-CDF7B7281091}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Server", "Routing\Routing.LoadBalancing\Routing.LoadBalancing.Server\Routing.LoadBalancing.Server.csproj", "{A0B02334-91C8-4178-87A0-3F8F5784DDB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Server", "Src\Routing\Routing.LoadBalancing\Routing.LoadBalancing.Server\Routing.LoadBalancing.Server.csproj", "{A0B02334-91C8-4178-87A0-3F8F5784DDB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Router", "Routing\Routing.LoadBalancing\Routing.LoadBalancing.Router\Routing.LoadBalancing.Router.csproj", "{A7815C9D-87F5-404A-B6BB-D6C6481517D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.Router", "Src\Routing\Routing.LoadBalancing\Routing.LoadBalancing.Router\Routing.LoadBalancing.Router.csproj", "{A7815C9D-87F5-404A-B6BB-D6C6481517D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.MessageFilters", "Routing\Routing.LoadBalancing\Routing.LoadBalancing.MessageFilters\Routing.LoadBalancing.MessageFilters.csproj", "{D1CD3B35-6858-4DAD-937C-56E652DCA502}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.LoadBalancing.MessageFilters", "Src\Routing\Routing.LoadBalancing\Routing.LoadBalancing.MessageFilters\Routing.LoadBalancing.MessageFilters.csproj", "{D1CD3B35-6858-4DAD-937C-56E652DCA502}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing.Multicast", "Routing.Multicast", "{02CC594B-1CB7-473C-AD8D-98ADA1B8212D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Common", "Routing\Routing.Multicast\Routing.Multicast.Common\Routing.Multicast.Common.csproj", "{C2F16532-2C51-4FB2-AB75-5AAEBA0CD868}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Common", "Src\Routing\Routing.Multicast\Routing.Multicast.Common\Routing.Multicast.Common.csproj", "{C2F16532-2C51-4FB2-AB75-5AAEBA0CD868}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Client", "Routing\Routing.Multicast\Routing.Multicast.Client\Routing.Multicast.Client.csproj", "{DBA15D2B-D44B-41C8-A2BB-88B4E54C0937}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Client", "Src\Routing\Routing.Multicast\Routing.Multicast.Client\Routing.Multicast.Client.csproj", "{DBA15D2B-D44B-41C8-A2BB-88B4E54C0937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Server", "Routing\Routing.Multicast\Routing.Multicast.Server\Routing.Multicast.Server.csproj", "{0956DE39-88C1-4D9C-B9DD-A53C6D518F19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Server", "Src\Routing\Routing.Multicast\Routing.Multicast.Server\Routing.Multicast.Server.csproj", "{0956DE39-88C1-4D9C-B9DD-A53C6D518F19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Router", "Routing\Routing.Multicast\Routing.Multicast.Router\Routing.Multicast.Router.csproj", "{511C3254-093E-4504-A403-8D443CBB6EEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Multicast.Router", "Src\Routing\Routing.Multicast\Routing.Multicast.Router\Routing.Multicast.Router.csproj", "{511C3254-093E-4504-A403-8D443CBB6EEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing.Version", "Routing.Version", "{62935190-1020-4A3E-A8D4-82C3EE833FDC}"
 	ProjectSection(SolutionItems) = preProject
-		Routing\Readme.md = Routing\Readme.md
+		Src\Routing\Readme.md = Src\Routing\Readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Client", "Routing\Routing.Version\Routing.Version.Client\Routing.Version.Client.csproj", "{8EB6A7BD-56A7-423E-9DAD-95FBD2B81165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Client", "Src\Routing\Routing.Version\Routing.Version.Client\Routing.Version.Client.csproj", "{8EB6A7BD-56A7-423E-9DAD-95FBD2B81165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Common", "Routing\Routing.Version\Routing.Version.Common\Routing.Version.Common.csproj", "{C90E14D4-725C-468B-9F0C-79D72BF3416B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Common", "Src\Routing\Routing.Version\Routing.Version.Common\Routing.Version.Common.csproj", "{C90E14D4-725C-468B-9F0C-79D72BF3416B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Server", "Routing\Routing.Version\Routing.Version.Server\Routing.Version.Server.csproj", "{9F1DA387-362F-4EF2-ADD0-DC4B33F91FCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Server", "Src\Routing\Routing.Version\Routing.Version.Server\Routing.Version.Server.csproj", "{9F1DA387-362F-4EF2-ADD0-DC4B33F91FCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Router", "Routing\Routing.Version\Routing.Version.Router\Routing.Version.Router.csproj", "{82F53C43-841F-4879-86DD-562D732413EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Router", "Src\Routing\Routing.Version\Routing.Version.Router\Routing.Version.Router.csproj", "{82F53C43-841F-4879-86DD-562D732413EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.ClientV2", "Routing\Routing.Version\Routing.Version.ClientV2\Routing.Version.ClientV2.csproj", "{842C1AEF-40A6-425F-B332-FE307D8F1CE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.ClientV2", "Src\Routing\Routing.Version\Routing.Version.ClientV2\Routing.Version.ClientV2.csproj", "{842C1AEF-40A6-425F-B332-FE307D8F1CE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Server2", "Routing\Routing.Version\Routing.Version.Server2\Routing.Version.Server2.csproj", "{2819C693-7C3C-489C-A555-A2441B95FA76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.Server2", "Src\Routing\Routing.Version\Routing.Version.Server2\Routing.Version.Server2.csproj", "{2819C693-7C3C-489C-A555-A2441B95FA76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.CommonExtend", "Routing\Routing.Version\Routing.Version.CommonExtend\Routing.Version.CommonExtend.csproj", "{7FE2EC3A-CA7F-4521-8982-2D94D594DB40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.Version.CommonExtend", "Src\Routing\Routing.Version\Routing.Version.CommonExtend\Routing.Version.CommonExtend.csproj", "{7FE2EC3A-CA7F-4521-8982-2D94D594DB40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UdpBinding", "UdpBinding", "{9182207E-702C-4D1B-BD00-999DD3A643F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.UdpBinding.Common", "Binding\UdpBinding\UdpBinding.Common\Binding.UdpBinding.Common.csproj", "{F94C6430-90D5-4924-A02C-5C3C35C64AD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.UdpBinding.Common", "Src\Binding\UdpBinding\UdpBinding.Common\Binding.UdpBinding.Common.csproj", "{F94C6430-90D5-4924-A02C-5C3C35C64AD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.UdpBinding.Client", "Binding\UdpBinding\UdpBinding.Client\Binding.UdpBinding.Client.csproj", "{EF2F76A4-47F6-4423-81D8-65F68285F405}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.UdpBinding.Client", "Src\Binding\UdpBinding\UdpBinding.Client\Binding.UdpBinding.Client.csproj", "{EF2F76A4-47F6-4423-81D8-65F68285F405}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.UdpBinding.Server", "Binding\UdpBinding\UdpBinding.Server\Binding.UdpBinding.Server.csproj", "{285213DA-AE01-4E95-99EF-AFC71E2E3F54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.UdpBinding.Server", "Src\Binding\UdpBinding\UdpBinding.Server\Binding.UdpBinding.Server.csproj", "{285213DA-AE01-4E95-99EF-AFC71E2E3F54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Serializer", "Serializer\HQF.Tutorial.WCF.Serializer\HQF.Tutorial.WCF.Serializer.csproj", "{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Contract", "Src\Common\HQF.Tutorial.WCF.Contract\HQF.Tutorial.WCF.Contract.csproj", "{8FC09188-486B-494A-BFE5-82A89F68EF4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Serializer.XUnitTest", "Serializer\HQF.Tutorial.WCF.XUnitTest\HQF.Tutorial.WCF.Serializer.XUnitTest.csproj", "{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Contract.Interface", "Src\Common\HQF.Tutorial.WCF.Contract.Interface\HQF.Tutorial.WCF.Contract.Interface.csproj", "{40672F0B-0596-4EDB-BCE2-263036CDF219}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Contract", "Common\HQF.Tutorial.WCF.Contract\HQF.Tutorial.WCF.Contract.csproj", "{8FC09188-486B-494A-BFE5-82A89F68EF4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Serializer", "Src\Serializer\HQF.Tutorial.WCF.Serializer\HQF.Tutorial.WCF.Serializer.csproj", "{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Contract.Interface", "Common\HQF.Tutorial.WCF.Contract.Interface\HQF.Tutorial.WCF.Contract.Interface.csproj", "{40672F0B-0596-4EDB-BCE2-263036CDF219}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Serializer.XUnitTest", "Src\Serializer\HQF.Tutorial.WCF.XUnitTest\HQF.Tutorial.WCF.Serializer.XUnitTest.csproj", "{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Host.Web", "Src\Host\HQF.Tutorial.WCF.Host.Web\HQF.Tutorial.WCF.Host.Web.csproj", "{33E0C7C9-DB81-4F06-83B6-7D92541B44A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.MSMQ.Mail.Client.WPF", "Src\Binding\MSMQ_Mail\Binding.MSMQ.Mail.Client.WPF\Binding.MSMQ.Mail.Client.WPF.csproj", "{7A797BEC-0274-4042-AF7C-7C5036ED11BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQF.Tutorial.WCF.Client.Web", "Src\Client\HQF.Tutorial.WCF.Client.Web\HQF.Tutorial.WCF.Client.Web.csproj", "{92A40114-B9F4-4FD4-B9A3-D017C93FB14C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{33E0C7C9-DB81-4F06-83B6-7D92541B44A0} = {33E0C7C9-DB81-4F06-83B6-7D92541B44A0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,14 +146,6 @@ Global
 		{CAA5D804-B776-4B74-B6C2-7516164E1B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAA5D804-B776-4B74-B6C2-7516164E1B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAA5D804-B776-4B74-B6C2-7516164E1B5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2207D2C-59F2-4311-8732-1FA4F81BB29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2207D2C-59F2-4311-8732-1FA4F81BB29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2207D2C-59F2-4311-8732-1FA4F81BB29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2207D2C-59F2-4311-8732-1FA4F81BB29B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{961D5E0F-BA1B-4450-9483-2945127A5646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{961D5E0F-BA1B-4450-9483-2945127A5646}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{961D5E0F-BA1B-4450-9483-2945127A5646}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{961D5E0F-BA1B-4450-9483-2945127A5646}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F12A05C-FF53-486C-B19B-70AF74EC2FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F12A05C-FF53-486C-B19B-70AF74EC2FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F12A05C-FF53-486C-B19B-70AF74EC2FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -175,10 +170,6 @@ Global
 		{252C37DE-D614-457B-9748-D10ABDA8A239}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252C37DE-D614-457B-9748-D10ABDA8A239}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{252C37DE-D614-457B-9748-D10ABDA8A239}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A797BEC-0274-4042-AF7C-7C5036ED11BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A797BEC-0274-4042-AF7C-7C5036ED11BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A797BEC-0274-4042-AF7C-7C5036ED11BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A797BEC-0274-4042-AF7C-7C5036ED11BA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A5D774B-5FCB-46B9-A3CB-104509D3C566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A5D774B-5FCB-46B9-A3CB-104509D3C566}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A5D774B-5FCB-46B9-A3CB-104509D3C566}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -291,14 +282,6 @@ Global
 		{285213DA-AE01-4E95-99EF-AFC71E2E3F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{285213DA-AE01-4E95-99EF-AFC71E2E3F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{285213DA-AE01-4E95-99EF-AFC71E2E3F54}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8FC09188-486B-494A-BFE5-82A89F68EF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FC09188-486B-494A-BFE5-82A89F68EF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FC09188-486B-494A-BFE5-82A89F68EF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -307,6 +290,26 @@ Global
 		{40672F0B-0596-4EDB-BCE2-263036CDF219}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40672F0B-0596-4EDB-BCE2-263036CDF219}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40672F0B-0596-4EDB-BCE2-263036CDF219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E0C7C9-DB81-4F06-83B6-7D92541B44A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E0C7C9-DB81-4F06-83B6-7D92541B44A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E0C7C9-DB81-4F06-83B6-7D92541B44A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E0C7C9-DB81-4F06-83B6-7D92541B44A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A797BEC-0274-4042-AF7C-7C5036ED11BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A797BEC-0274-4042-AF7C-7C5036ED11BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A797BEC-0274-4042-AF7C-7C5036ED11BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A797BEC-0274-4042-AF7C-7C5036ED11BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A40114-B9F4-4FD4-B9A3-D017C93FB14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A40114-B9F4-4FD4-B9A3-D017C93FB14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A40114-B9F4-4FD4-B9A3-D017C93FB14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A40114-B9F4-4FD4-B9A3-D017C93FB14C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -315,8 +318,6 @@ Global
 		{7E666593-81F2-4868-AC31-76887149F6EC} = {540004B9-4978-4077-9393-C06A6FD61C65}
 		{18B5815F-3954-4899-849F-109E3FBE070E} = {540004B9-4978-4077-9393-C06A6FD61C65}
 		{CAA5D804-B776-4B74-B6C2-7516164E1B5A} = {540004B9-4978-4077-9393-C06A6FD61C65}
-		{B2207D2C-59F2-4311-8732-1FA4F81BB29B} = {540004B9-4978-4077-9393-C06A6FD61C65}
-		{961D5E0F-BA1B-4450-9483-2945127A5646} = {A7061D33-CB29-4BBF-8BEE-F1C73ECB84F1}
 		{7F12A05C-FF53-486C-B19B-70AF74EC2FAC} = {A7061D33-CB29-4BBF-8BEE-F1C73ECB84F1}
 		{8494784E-FDEF-45E7-B248-083898F61EFB} = {6EC494D6-0405-4C3B-8DFD-4BE1AD77235C}
 		{6DB80714-B92C-4912-BE7D-494DFDE24356} = {8494784E-FDEF-45E7-B248-083898F61EFB}
@@ -325,7 +326,6 @@ Global
 		{D71E6D21-CE2E-459F-ABCC-B7E174B12CCC} = {6EC494D6-0405-4C3B-8DFD-4BE1AD77235C}
 		{9CBFCC71-0B0C-4FCF-A426-1090EA5E8091} = {D71E6D21-CE2E-459F-ABCC-B7E174B12CCC}
 		{252C37DE-D614-457B-9748-D10ABDA8A239} = {D71E6D21-CE2E-459F-ABCC-B7E174B12CCC}
-		{7A797BEC-0274-4042-AF7C-7C5036ED11BA} = {D71E6D21-CE2E-459F-ABCC-B7E174B12CCC}
 		{4A5D774B-5FCB-46B9-A3CB-104509D3C566} = {D71E6D21-CE2E-459F-ABCC-B7E174B12CCC}
 		{1489C915-C013-426C-B905-82B084319282} = {A873E11B-80BD-42BB-8DB3-CC587573ABA5}
 		{F8C98B04-2014-4C62-BCC8-9C5CFD86F8E0} = {1489C915-C013-426C-B905-82B084319282}
@@ -360,9 +360,12 @@ Global
 		{F94C6430-90D5-4924-A02C-5C3C35C64AD3} = {9182207E-702C-4D1B-BD00-999DD3A643F9}
 		{EF2F76A4-47F6-4423-81D8-65F68285F405} = {9182207E-702C-4D1B-BD00-999DD3A643F9}
 		{285213DA-AE01-4E95-99EF-AFC71E2E3F54} = {9182207E-702C-4D1B-BD00-999DD3A643F9}
-		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3} = {A41CF768-F339-4CA4-AA23-1CD5CBA9A9A7}
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47} = {A41CF768-F339-4CA4-AA23-1CD5CBA9A9A7}
 		{8FC09188-486B-494A-BFE5-82A89F68EF4D} = {CBF3FA5F-5DEC-42A2-A090-71E46139B16A}
 		{40672F0B-0596-4EDB-BCE2-263036CDF219} = {CBF3FA5F-5DEC-42A2-A090-71E46139B16A}
+		{7C5E876B-7CC2-4E06-BF30-1E7CC71A92A3} = {A41CF768-F339-4CA4-AA23-1CD5CBA9A9A7}
+		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47} = {A41CF768-F339-4CA4-AA23-1CD5CBA9A9A7}
+		{33E0C7C9-DB81-4F06-83B6-7D92541B44A0} = {540004B9-4978-4077-9393-C06A6FD61C65}
+		{7A797BEC-0274-4042-AF7C-7C5036ED11BA} = {D71E6D21-CE2E-459F-ABCC-B7E174B12CCC}
+		{92A40114-B9F4-4FD4-B9A3-D017C93FB14C} = {A7061D33-CB29-4BBF-8BEE-F1C73ECB84F1}
 	EndGlobalSection
 EndGlobal
