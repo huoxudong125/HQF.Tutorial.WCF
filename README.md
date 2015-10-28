@@ -54,7 +54,10 @@ Hopefully, this post provides details clearly about what's released in WCF 3.5 a
 - **ChannelFactory Cache**, WCF 4.5 now support for caching Channel Factories to reduce overhead associated while creating a ChannelFactory instance.
 - WCF Service can be configured using config file or through code. In v4.5, **configuration through code** has been simplified by defining a public static method (i.e. configure) instead of creating a ServiceHostFactory.
 
-##Binding Demos
+### MSDN WCF Demo
+Go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and WF samples. 
+
+##Binding 
 [Binding Demos intuduction](/Binding/Readme.md)
 
 
