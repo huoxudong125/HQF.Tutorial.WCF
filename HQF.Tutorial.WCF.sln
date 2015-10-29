@@ -154,6 +154,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concurrency.Single.Server",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concurrency.Single.Common", "Src\Concurrency\Concurrency.Single\Concurrency.Single.Common\Concurrency.Single.Common.csproj", "{DBF3B0BD-70F4-4920-80AF-EEF47E5EFD4C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X.WCF Data Service", "X.WCF Data Service", "{776EB954-2218-4B2E-8A50-10F269C2E439}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "S.Scenario", "S.Scenario", "{199F8892-24C0-454D-9726-2EF588EFCCE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleChatRoom", "SimpleChatRoom", "{A1D7A8AD-083F-41C6-961A-B41BF7E7B134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleChatRoom.Common.Interface", "Src\Scenario\SimpleChatRoom\SimpleChatRoom.Common.Interface\SimpleChatRoom.Common.Interface.csproj", "{B678B3B5-6599-4EFC-BE3C-999416A5C781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleChatRoom.Common.Implement", "Src\Scenario\SimpleChatRoom\SimpleChatRoom.Common.Implement\SimpleChatRoom.Common.Implement.csproj", "{C66F1097-52C1-4C1D-B0A6-77BD4817DD19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleChatRoom.Server", "Src\Scenario\SimpleChatRoom\SimpleChatRoom.Server\SimpleChatRoom.Server.csproj", "{B6363255-42A1-4B6D-B4C1-9F07D094BA5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleChatRoom.Client", "Src\Scenario\SimpleChatRoom\SimpleChatRoom.Client\SimpleChatRoom.Client.csproj", "{8C857E92-2227-45B8-8480-FD636D14AF38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -356,6 +370,22 @@ Global
 		{DBF3B0BD-70F4-4920-80AF-EEF47E5EFD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBF3B0BD-70F4-4920-80AF-EEF47E5EFD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBF3B0BD-70F4-4920-80AF-EEF47E5EFD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B678B3B5-6599-4EFC-BE3C-999416A5C781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B678B3B5-6599-4EFC-BE3C-999416A5C781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B678B3B5-6599-4EFC-BE3C-999416A5C781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B678B3B5-6599-4EFC-BE3C-999416A5C781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66F1097-52C1-4C1D-B0A6-77BD4817DD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66F1097-52C1-4C1D-B0A6-77BD4817DD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66F1097-52C1-4C1D-B0A6-77BD4817DD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66F1097-52C1-4C1D-B0A6-77BD4817DD19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6363255-42A1-4B6D-B4C1-9F07D094BA5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6363255-42A1-4B6D-B4C1-9F07D094BA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6363255-42A1-4B6D-B4C1-9F07D094BA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6363255-42A1-4B6D-B4C1-9F07D094BA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C857E92-2227-45B8-8480-FD636D14AF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C857E92-2227-45B8-8480-FD636D14AF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C857E92-2227-45B8-8480-FD636D14AF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C857E92-2227-45B8-8480-FD636D14AF38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -419,5 +449,10 @@ Global
 		{DD55DAE9-42CA-4D95-B0EC-444F80192871} = {84A94D4F-299C-41FE-A57D-40ED7D9C93DE}
 		{6ABCB579-4D33-4BF2-9D10-F3CF2B266F6D} = {DD55DAE9-42CA-4D95-B0EC-444F80192871}
 		{DBF3B0BD-70F4-4920-80AF-EEF47E5EFD4C} = {DD55DAE9-42CA-4D95-B0EC-444F80192871}
+		{A1D7A8AD-083F-41C6-961A-B41BF7E7B134} = {199F8892-24C0-454D-9726-2EF588EFCCE5}
+		{B678B3B5-6599-4EFC-BE3C-999416A5C781} = {A1D7A8AD-083F-41C6-961A-B41BF7E7B134}
+		{C66F1097-52C1-4C1D-B0A6-77BD4817DD19} = {A1D7A8AD-083F-41C6-961A-B41BF7E7B134}
+		{B6363255-42A1-4B6D-B4C1-9F07D094BA5C} = {A1D7A8AD-083F-41C6-961A-B41BF7E7B134}
+		{8C857E92-2227-45B8-8480-FD636D14AF38} = {A1D7A8AD-083F-41C6-961A-B41BF7E7B134}
 	EndGlobalSection
 EndGlobal

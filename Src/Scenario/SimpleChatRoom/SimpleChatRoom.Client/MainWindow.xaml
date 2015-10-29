@@ -1,0 +1,49 @@
+﻿<Window x:Class="SimpleChatRoom.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        mc:Ignorable="d ignore"
+        Height="380.105"
+        Width="722.513"
+        Title="MVVM Light Application"
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Height="4" VerticalAlignment="Top"
+                      Background="AntiqueWhite" />
+
+        <ListBox ItemsSource="{Binding ChatMessages}" VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"/>
+        
+        <TextBox Grid.Row="1" FontSize="16"
+                   FontWeight="Bold"
+                   Foreground="Purple"
+                   Text="{Binding MessageText}"
+                   VerticalAlignment="Stretch"
+                   HorizontalAlignment="Stretch"
+                   TextWrapping="Wrap" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Margin="5" Padding="10" Command="{Binding ConnectCommand}">Connect</Button>
+            <Button Margin="5" Padding="10">Quit</Button>
+            <Label VerticalAlignment="Center" FontSize="16" FontWeight="Bold">Nick Name:</Label>
+            <TextBox Text="{Binding Nickname}" MinWidth="150"></TextBox>
+            <Button Margin="5" Padding="10" Command="{Binding SendCommand}">Send</Button>
+        </StackPanel>
+    </Grid>
+</Window>
