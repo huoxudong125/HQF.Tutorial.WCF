@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="IChatService.cs" />
     <Compile Include="IMessageCallback.cs" />
     <Compile Include="Entities\Sessions.cs" />

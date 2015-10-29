@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
-using System.Windows.Input;
+using System.ServiceModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using SimpleChatRoom.Client.Model;
 using SimpleChatRoom.Common.Interface;
-using System.ServiceModel;
 
 namespace SimpleChatRoom.Client.ViewModel
 {
@@ -18,7 +17,7 @@ namespace SimpleChatRoom.Client.ViewModel
     ///         See http://www.mvvmlight.net
     ///     </para>
     /// </summary>
-    public class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase, IMessageCallback
     {
         /// <summary>
         ///     The <see cref="WelcomeTitle" /> property's name.
@@ -57,11 +56,13 @@ namespace SimpleChatRoom.Client.ViewModel
 
                     WelcomeTitle = item.Title;
                 });
-
             ConnectCommand = new RelayCommand(OnConnect);
             SendCommand = new RelayCommand(OnSend);
-            var channel = new DuplexChannelFactory<IChatService>("chartService");
+            InstanceContext instanceContext = new InstanceContext(this);
+            var channel = new DuplexChannelFactory<IChatService>(instanceContext, "chartService");
             _chatService = channel.CreateChannel();
+            Nickname = "frank";
+            this.MessageText = "Hello!";
         }
 
         /// <summary>
@@ -91,8 +92,16 @@ namespace SimpleChatRoom.Client.ViewModel
             get { return chatMessages; }
         }
 
-        public ICommand ConnectCommand { get; private set; }
-        public ICommand SendCommand { get; private set; }
+        public RelayCommand ConnectCommand { get; private set; }
+
+        public RelayCommand SendCommand { get; private set; }
+
+        public void OnMessageAdded(Message message)
+        {
+            Console.WriteLine("Add message begin...");
+            //this.chatMessages.Add(message.AsString());
+            Console.WriteLine("Add message finish");
+        }
 
         private void OnSend()
         {
@@ -101,12 +110,11 @@ namespace SimpleChatRoom.Client.ViewModel
 
             try
             {
-               _chatService.SendMessage(this.Nickname, this.MessageText);
+                _chatService.SendMessage(this.Nickname, this.MessageText);
             }
             catch { }
 
             this.MessageText = string.Empty;
-
         }
 
         private void OnConnect()
@@ -122,16 +130,14 @@ namespace SimpleChatRoom.Client.ViewModel
                 {
                     var chatHistory = _chatService.GetChatHistory();
 
-                    var chatHistoryStrings = chatHistory.Select(x => x.ToString());
+                    var chatHistoryStrings = chatHistory.Select(x => x.AsString());
                     this.chatMessages = new ObservableCollection<string>(chatHistoryStrings);
                     RaisePropertyChanged(() => ChatMessages);
                 }
             }
             catch
             {
-                
             }
-
         }
 
         ////}
@@ -139,7 +145,6 @@ namespace SimpleChatRoom.Client.ViewModel
         ////    base.Cleanup();
         ////    // Clean up if needed
         ////{
-
         ////public override void Cleanup()
     }
 }

@@ -19,7 +19,7 @@ namespace SimpleChatRoom.Common.Implement
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            //throw new UnintentionalCodeFirstException();
         }
 
         public virtual DbSet<Messages> Messages { get; set; }

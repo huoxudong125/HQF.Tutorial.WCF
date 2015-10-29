@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimpleChatRoom.Common.Implement
 {
+    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
     public class ChatService : IChatService
     {
         private Dictionary<string, Sessions> _userToSessionMap;
@@ -82,7 +83,7 @@ namespace SimpleChatRoom.Common.Implement
                     callback.OnMessageAdded(message);
                 }
 
-                this.LogMessage(message);
+                Task.Run(async () => { await this.LogMessage(message); }).Wait();
 
                 return true;
             }

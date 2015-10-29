@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="ChatAppDB.cs" />
     <Compile Include="ChatService.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
