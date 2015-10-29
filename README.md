@@ -57,6 +57,17 @@ Hopefully, this post provides details clearly about what's released in WCF 3.5 a
 ### MSDN WCF Demo
 Go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and WF samples. 
 
+##
+[WCF Data Services 4.5](https://msdn.microsoft.com/en-us/library/cc668792(v=vs.110).aspx)
+
+`WCF Data Services` (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the `Open Data Protocol (OData)` to expose and consume data over the Web or intranet by using the semantics of `representational state transfer (REST)` . `OData` exposes data as resources that are addressable by URIs. Data is accessed and changed by using standard HTTP verbs of `GET`, `PUT`, `POST`, and `DELETE`. `OData` uses the entity-relationship conventions of the Entity Data Model to expose resources as sets of entities that are related by associations.
+
+`WCF Data Services` uses the OData protocol for addressing and updating resources. In this way, you can access these services from any client that supports `OData`. `OData` enables you to request and write data to resources by using well-known transfer formats: Atom, a set of standards for exchanging and updating data as `XM`L, and `JavaScript Object Notation (JSON)`, a text-based data exchange format used extensively in **AJAX** application.
+
+`WCF Data Services` can expose data that originates from various sources as OData feeds. Visual Studio tools make it easier for you to create an OData-based service by using an `ADO.NET Entity Framework` data model. You can also create OData feeds based on `common language runtime (CLR)` classes and even late-bound or un-typed data.
+
+`WCF Data Services` also includes a set of client libraries, one for general .NET Framework client applications and another specifically for Silverlight-based applications. These client libraries provide an object-based programming model when you access an OData feed from environments such as the .NET Framework and Silverlight. 
+
 ##Binding 
 [Binding Demos intuduction](/Binding/Readme.md)
 
