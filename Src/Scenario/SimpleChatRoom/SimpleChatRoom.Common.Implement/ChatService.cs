@@ -27,6 +27,17 @@ namespace SimpleChatRoom.Common.Implement
                     this._receiverCallbacks.Add(callback);
 
                     this.InitSession(nickname);
+
+                    //foreach (var clientcallback in _receiverCallbacks)
+                    //{
+                    //    clientcallback.OnMessageAdded(new Message() {
+                    //        Sender = "Server",
+                    //        Timestamp= DateTime.Now,
+                    //        MessageText = string.Format("Wellcome {0} join in chart",nickname)});
+                    //}
+
+
+                    Console.WriteLine("\n Wellcome {0} Join the Chat Room!",nickname);
                 }
 
                 return true;
@@ -119,7 +130,10 @@ namespace SimpleChatRoom.Common.Implement
                 this._db.Sessions.Add(session);
                 this._db.SaveChanges();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nInitSession error:{0}\n", ex.Message);
+            }
         }
 
         private void Init()
@@ -144,7 +158,10 @@ namespace SimpleChatRoom.Common.Implement
 
                 this._db.SaveChanges();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nCloseSession error:{0}\n", ex.Message);
+            }
         }
 
         private async Task LogMessage(Message message)
@@ -164,7 +181,10 @@ namespace SimpleChatRoom.Common.Implement
                 this._db.Messages.Add(dbMessage);
                 await this._db.SaveChangesAsync();
             }
-            catch { }
+            catch(Exception ex)
+            {
+                Console.WriteLine("\nSave Message to DB error:{0}\n",ex.Message);
+            }
         }
 
         private Message ConvertMessage(Messages dbMessage)

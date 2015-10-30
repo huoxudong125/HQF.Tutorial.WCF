@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.ServiceModel;
+using System.Threading.Tasks;
+using System.Windows;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using SimpleChatRoom.Client.Model;
@@ -24,6 +26,8 @@ namespace SimpleChatRoom.Client.ViewModel
         /// </summary>
         public const string WelcomeTitlePropertyName = "WelcomeTitle";
 
+        private readonly IChatService _chatService;
+
         private readonly IDataService _dataService;
         private readonly IChannel proxy;
 
@@ -37,7 +41,7 @@ namespace SimpleChatRoom.Client.ViewModel
 
         private string nickname;
 
-        private IChatService _chatService;
+        #region .octor
 
         /// <summary>
         ///     Initializes a new instance of the MainViewModel class.
@@ -56,14 +60,73 @@ namespace SimpleChatRoom.Client.ViewModel
 
                     WelcomeTitle = item.Title;
                 });
-            ConnectCommand = new RelayCommand(OnConnect);
-            SendCommand = new RelayCommand(OnSend);
-            InstanceContext instanceContext = new InstanceContext(this);
+            ConnectCommand = new RelayCommand(OnConnect, IsNeedConnect);
+            SendCommand = new RelayCommand(OnSend, CanSendMessage);
+            DisConnectCommand = new RelayCommand(OnDisConnect, IsNeedDisConnect);
+            var instanceContext = new InstanceContext(this);
             var channel = new DuplexChannelFactory<IChatService>(instanceContext, "chartService");
             _chatService = channel.CreateChannel();
             Nickname = "frank";
-            this.MessageText = "Hello!";
+            MessageText = "Hello!";
+
+            RaiseCommandChanged();
         }
+
+        #endregion
+
+        public void OnMessageAdded(Message message)
+        {
+            Console.WriteLine("Add message begin...");
+            chatMessages.Add(message.AsString());
+            Console.WriteLine("Add message finish");
+        }
+
+        private void OnSend()
+        {
+            if (!isConnected)
+                return;
+
+            try
+            {
+                Task.Run(() => _chatService.SendMessage(Nickname, MessageText))
+                    .ConfigureAwait(false);
+            }
+            catch
+            {
+            }
+
+            MessageText = string.Empty;
+        }
+
+        private void OnConnect()
+        {
+            if (isConnected)
+            {
+                MessageBox.Show("you need to connect first");
+                return;
+            }
+
+            try
+            {
+                isConnected = _chatService.Connect(Nickname);
+
+                if (isConnected)
+                {
+                    var chatHistory = _chatService.GetChatHistory();
+
+                    var chatHistoryStrings = chatHistory.Select(x => x.AsString());
+                    chatMessages = new ObservableCollection<string>(chatHistoryStrings);
+                    RaisePropertyChanged(() => ChatMessages);
+                }
+                RaiseCommandChanged();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        #region Properties
 
         /// <summary>
         ///     Gets the WelcomeTitle property.
@@ -78,13 +141,21 @@ namespace SimpleChatRoom.Client.ViewModel
         public string Nickname
         {
             get { return nickname; }
-            set { Set(ref nickname, value); }
+            set
+            {
+                Set(ref nickname, value);
+                RaiseCommandChanged();
+            }
         }
 
         public string MessageText
         {
             get { return messageText; }
-            set { Set(ref messageText, value); }
+            set
+            {
+                Set(ref messageText, value);
+                RaiseCommandChanged();
+            }
         }
 
         public IEnumerable<string> ChatMessages
@@ -92,59 +163,54 @@ namespace SimpleChatRoom.Client.ViewModel
             get { return chatMessages; }
         }
 
-        public RelayCommand ConnectCommand { get; private set; }
+        #endregion
 
-        public RelayCommand SendCommand { get; private set; }
+        //public override void Cleanup()
+        //{
+        ////Clean up if needed
+        //    base.Cleanup();
+        //}
 
-        public void OnMessageAdded(Message message)
+        #region Command
+
+        public RelayCommand ConnectCommand { get; }
+
+        public RelayCommand SendCommand { get; }
+
+        public RelayCommand DisConnectCommand { get; }
+
+        #endregion
+
+        #region private functions
+
+        private void RaiseCommandChanged()
         {
-            Console.WriteLine("Add message begin...");
-            //this.chatMessages.Add(message.AsString());
-            Console.WriteLine("Add message finish");
+            ConnectCommand.RaiseCanExecuteChanged();
+            SendCommand.RaiseCanExecuteChanged();
+            DisConnectCommand.RaiseCanExecuteChanged();
         }
 
-        private void OnSend()
+        private void OnDisConnect()
         {
-            if (!this.isConnected)
-                return;
-
-            try
-            {
-                _chatService.SendMessage(this.Nickname, this.MessageText);
-            }
-            catch { }
-
-            this.MessageText = string.Empty;
+            isConnected = _chatService.Connect(Nickname);
+            RaiseCommandChanged();
         }
 
-        private void OnConnect()
+        private bool IsNeedDisConnect()
         {
-            if (this.isConnected)
-                return;
-
-            try
-            {
-                this.isConnected = _chatService.Connect(this.Nickname);
-
-                if (this.isConnected)
-                {
-                    var chatHistory = _chatService.GetChatHistory();
-
-                    var chatHistoryStrings = chatHistory.Select(x => x.AsString());
-                    this.chatMessages = new ObservableCollection<string>(chatHistoryStrings);
-                    RaisePropertyChanged(() => ChatMessages);
-                }
-            }
-            catch
-            {
-            }
+            return isConnected;
         }
 
-        ////}
+        private bool CanSendMessage()
+        {
+            return !string.IsNullOrEmpty(MessageText) && !string.IsNullOrEmpty(nickname) && isConnected;
+        }
 
-        ////    base.Cleanup();
-        ////    // Clean up if needed
-        ////{
-        ////public override void Cleanup()
+        private bool IsNeedConnect()
+        {
+            return !isConnected;
+        }
+
+        #endregion
     }
 }

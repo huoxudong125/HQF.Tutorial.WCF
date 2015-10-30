@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.ServiceModel.Channels;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleChatRoom.Common.Interface
 {
-    [ServiceContract(SessionMode = SessionMode.Required, CallbackContract = typeof(IMessageCallback))]
+    [ServiceContract(Namespace = "http://hqfz.cnlbogs.com/", SessionMode = SessionMode.Required,
+        CallbackContract = typeof (IMessageCallback))]
     public interface IChatService
     {
         [OperationContract]
@@ -23,5 +19,4 @@ namespace SimpleChatRoom.Common.Interface
         [OperationContract]
         bool SendMessage(string sender, string messageText);
     }
-
 }

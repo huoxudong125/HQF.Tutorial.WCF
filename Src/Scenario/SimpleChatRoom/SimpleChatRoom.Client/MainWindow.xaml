@@ -34,15 +34,16 @@
         <TextBox Grid.Row="1" FontSize="16"
                    FontWeight="Bold"
                    Foreground="Purple"
-                   Text="{Binding MessageText}"
+                   Text="{Binding MessageText,UpdateSourceTrigger=PropertyChanged}"
                    VerticalAlignment="Stretch"
                    HorizontalAlignment="Stretch"
                    TextWrapping="Wrap" />
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Margin="5" Padding="10" Command="{Binding ConnectCommand}">Connect</Button>
-            <Button Margin="5" Padding="10">Quit</Button>
+            <Button Margin="5" Padding="10"  Command="{Binding DisConnectCommand}">Quit</Button>
             <Label VerticalAlignment="Center" FontSize="16" FontWeight="Bold">Nick Name:</Label>
-            <TextBox Text="{Binding Nickname}" MinWidth="150"></TextBox>
+            <TextBox Text="{Binding Nickname,UpdateSourceTrigger=PropertyChanged}" FontSize="16"
+                     Foreground="Green" MinWidth="150"></TextBox>
             <Button Margin="5" Padding="10" Command="{Binding SendCommand}">Send</Button>
         </StackPanel>
     </Grid>
