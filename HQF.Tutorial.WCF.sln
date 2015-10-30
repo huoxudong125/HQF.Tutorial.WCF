@@ -159,6 +159,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "S.Scenario", "S.Scenario", "{199F8892-24C0-454D-9726-2EF588EFCCE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleChatRoom", "SimpleChatRoom", "{A1D7A8AD-083F-41C6-961A-B41BF7E7B134}"
+	ProjectSection(SolutionItems) = preProject
+		Src\Scenario\SimpleChatRoom\Readme.md = Src\Scenario\SimpleChatRoom\Readme.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleChatRoom.Common.Interface", "Src\Scenario\SimpleChatRoom\SimpleChatRoom.Common.Interface\SimpleChatRoom.Common.Interface.csproj", "{B678B3B5-6599-4EFC-BE3C-999416A5C781}"
 EndProject
@@ -181,6 +184,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract.Duplex.Server", "Src\Contract\Contract.Duplex\Contract.Duplex.Server\Contract.Duplex.Server.csproj", "{7C40F8B3-C34C-43C6-B97D-E32D92539FD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract.Duplex.Common", "Src\Contract\Contract.Duplex\Contract.Duplex.Common\Contract.Duplex.Common.csproj", "{EACF4605-22D6-4D89-854E-6963DD5692DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Broadcasting", "Broadcasting", "{3DC0AA34-540C-4A93-953C-F1420B6228C1}"
+	ProjectSection(SolutionItems) = preProject
+		Src\Scenario\Broadcasting\Readme.md = Src\Scenario\Broadcasting\Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -486,5 +494,6 @@ Global
 		{3654BF17-E90F-4527-ACBE-67DA243A7F54} = {4EE59FE4-7C85-4CCB-B427-B55B33489C72}
 		{7C40F8B3-C34C-43C6-B97D-E32D92539FD2} = {4EE59FE4-7C85-4CCB-B427-B55B33489C72}
 		{EACF4605-22D6-4D89-854E-6963DD5692DE} = {4EE59FE4-7C85-4CCB-B427-B55B33489C72}
+		{3DC0AA34-540C-4A93-953C-F1420B6228C1} = {199F8892-24C0-454D-9726-2EF588EFCCE5}
 	EndGlobalSection
 EndGlobal
