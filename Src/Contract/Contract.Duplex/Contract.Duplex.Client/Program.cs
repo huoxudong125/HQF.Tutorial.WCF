@@ -47,6 +47,8 @@ namespace Contract.Duplex.Client
                 channel.MultiplyBy(4);
                 Console.WriteLine("DivideBy:{0}", z2);
                 channel.DivideBy(4);
+
+                channel.Clear();
             }
             catch (Exception fx)
             {
