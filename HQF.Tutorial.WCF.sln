@@ -172,8 +172,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleChatRoom.Client", "Src\Scenario\SimpleChatRoom\SimpleChatRoom.Client\SimpleChatRoom.Client.csproj", "{8C857E92-2227-45B8-8480-FD636D14AF38}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "E.Contract", "E.Contract", "{96359682-8646-4213-B31A-886D1BB04517}"
+	ProjectSection(SolutionItems) = preProject
+		Src\Contract\Readme.md = Src\Contract\Readme.md
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contract.RequestReply", "Contract.RequestReply", "{509A1FD1-818D-4157-AD27-1F12E3B40671}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contract.AsyncPattern", "Contract.AsyncPattern", "{509A1FD1-818D-4157-AD27-1F12E3B40671}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contract.OneWay", "Contract.OneWay", "{0A3DE31A-6823-4348-8DF8-948C02E95D88}"
 EndProject
@@ -189,6 +192,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Broadcasting", "Broadcastin
 	ProjectSection(SolutionItems) = preProject
 		Src\Scenario\Broadcasting\Readme.md = Src\Scenario\Broadcasting\Readme.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract.AsyncPattern.Common", "Src\Contract\Contract.AsyncPattern\Contract.AsyncPattern.Common\Contract.AsyncPattern.Common.csproj", "{417B4E21-DF47-48CE-916A-10E58112E3F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract.AsyncPattern.Client", "Src\Contract\Contract.AsyncPattern\Contract.AsyncPattern.Client\Contract.AsyncPattern.Client.csproj", "{4E106F3C-7F04-4102-A29D-3E9BD356EA27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract.AsyncPattern.Server", "Src\Contract\Contract.AsyncPattern\Contract.AsyncPattern.Server\Contract.AsyncPattern.Server.csproj", "{7936133F-FC58-42C9-BC23-DF959E9E58DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -420,6 +429,18 @@ Global
 		{EACF4605-22D6-4D89-854E-6963DD5692DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EACF4605-22D6-4D89-854E-6963DD5692DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EACF4605-22D6-4D89-854E-6963DD5692DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417B4E21-DF47-48CE-916A-10E58112E3F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417B4E21-DF47-48CE-916A-10E58112E3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417B4E21-DF47-48CE-916A-10E58112E3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417B4E21-DF47-48CE-916A-10E58112E3F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E106F3C-7F04-4102-A29D-3E9BD356EA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E106F3C-7F04-4102-A29D-3E9BD356EA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E106F3C-7F04-4102-A29D-3E9BD356EA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E106F3C-7F04-4102-A29D-3E9BD356EA27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7936133F-FC58-42C9-BC23-DF959E9E58DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7936133F-FC58-42C9-BC23-DF959E9E58DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7936133F-FC58-42C9-BC23-DF959E9E58DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7936133F-FC58-42C9-BC23-DF959E9E58DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -495,5 +516,8 @@ Global
 		{7C40F8B3-C34C-43C6-B97D-E32D92539FD2} = {4EE59FE4-7C85-4CCB-B427-B55B33489C72}
 		{EACF4605-22D6-4D89-854E-6963DD5692DE} = {4EE59FE4-7C85-4CCB-B427-B55B33489C72}
 		{3DC0AA34-540C-4A93-953C-F1420B6228C1} = {199F8892-24C0-454D-9726-2EF588EFCCE5}
+		{417B4E21-DF47-48CE-916A-10E58112E3F5} = {509A1FD1-818D-4157-AD27-1F12E3B40671}
+		{4E106F3C-7F04-4102-A29D-3E9BD356EA27} = {509A1FD1-818D-4157-AD27-1F12E3B40671}
+		{7936133F-FC58-42C9-BC23-DF959E9E58DE} = {509A1FD1-818D-4157-AD27-1F12E3B40671}
 	EndGlobalSection
 EndGlobal
