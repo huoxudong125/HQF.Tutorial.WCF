@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Binding", "3.Binding", "{6EC494D6-0405-4C3B-8DFD-4BE1AD77235C}"
 	ProjectSection(SolutionItems) = preProject
@@ -206,6 +206,19 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Broadcasting.Server", "Src\Scenario\Broadcasting\Broadcasting.Server\Broadcasting.Server.csproj", "{24D258DB-7FEA-4A68-B74A-7D5771597BFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Broadcasting.Client", "Src\Scenario\Broadcasting\Broadcasting.Client\Broadcasting.Client.csproj", "{AF47564D-1492-4F8A-968A-5D44F9B423C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "F.ExceptionHandling", "F.ExceptionHandling", "{EC701F20-09A0-4E2E-85F7-4AC208556507}"
+	ProjectSection(SolutionItems) = preProject
+		Src\ExceptionHandling\Readme.md = Src\ExceptionHandling\Readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Extensions", "Src\ExceptionHandling\ExceptionHandling.Extensions\ExceptionHandling.Extensions.csproj", "{47CF20AA-2FEE-4BAE-86D7-A47EA4D6B7D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Common", "Src\ExceptionHandling\ExceptionHandling.Common\ExceptionHandling.Common.csproj", "{ADEFC394-4A25-4777-A5DA-EB7CC9AFEAFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Client", "Src\ExceptionHandling\ExceptionHandling.Client\ExceptionHandling.Client.csproj", "{B924CE9E-A9D7-4A72-8A72-1BB9351BDD72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Server", "Src\ExceptionHandling\ExceptionHandling.Server\ExceptionHandling.Server.csproj", "{B12835E5-5BAE-4F4C-9972-008630C036BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -465,6 +478,22 @@ Global
 		{AF47564D-1492-4F8A-968A-5D44F9B423C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF47564D-1492-4F8A-968A-5D44F9B423C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF47564D-1492-4F8A-968A-5D44F9B423C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47CF20AA-2FEE-4BAE-86D7-A47EA4D6B7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47CF20AA-2FEE-4BAE-86D7-A47EA4D6B7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47CF20AA-2FEE-4BAE-86D7-A47EA4D6B7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47CF20AA-2FEE-4BAE-86D7-A47EA4D6B7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADEFC394-4A25-4777-A5DA-EB7CC9AFEAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEFC394-4A25-4777-A5DA-EB7CC9AFEAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEFC394-4A25-4777-A5DA-EB7CC9AFEAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEFC394-4A25-4777-A5DA-EB7CC9AFEAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B924CE9E-A9D7-4A72-8A72-1BB9351BDD72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B924CE9E-A9D7-4A72-8A72-1BB9351BDD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B924CE9E-A9D7-4A72-8A72-1BB9351BDD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B924CE9E-A9D7-4A72-8A72-1BB9351BDD72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12835E5-5BAE-4F4C-9972-008630C036BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12835E5-5BAE-4F4C-9972-008630C036BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12835E5-5BAE-4F4C-9972-008630C036BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12835E5-5BAE-4F4C-9972-008630C036BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -547,5 +576,9 @@ Global
 		{FB332821-3888-4744-9B9F-A78D4094676A} = {3DC0AA34-540C-4A93-953C-F1420B6228C1}
 		{24D258DB-7FEA-4A68-B74A-7D5771597BFC} = {3DC0AA34-540C-4A93-953C-F1420B6228C1}
 		{AF47564D-1492-4F8A-968A-5D44F9B423C3} = {3DC0AA34-540C-4A93-953C-F1420B6228C1}
+		{47CF20AA-2FEE-4BAE-86D7-A47EA4D6B7D9} = {EC701F20-09A0-4E2E-85F7-4AC208556507}
+		{ADEFC394-4A25-4777-A5DA-EB7CC9AFEAFF} = {EC701F20-09A0-4E2E-85F7-4AC208556507}
+		{B924CE9E-A9D7-4A72-8A72-1BB9351BDD72} = {EC701F20-09A0-4E2E-85F7-4AC208556507}
+		{B12835E5-5BAE-4F4C-9972-008630C036BD} = {EC701F20-09A0-4E2E-85F7-4AC208556507}
 	EndGlobalSection
 EndGlobal
