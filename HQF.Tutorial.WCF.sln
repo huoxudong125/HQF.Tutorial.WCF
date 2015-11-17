@@ -143,6 +143,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagnostics.Server", "Src\Diagnostics\Diagnostics.Server\Diagnostics.Server.csproj", "{CC7D0120-EE29-4897-B239-D075018221FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "D.ConcurrencyAndThroughput", "D.ConcurrencyAndThroughput", "{84A94D4F-299C-41FE-A57D-40ED7D9C93DE}"
+	ProjectSection(SolutionItems) = preProject
+		Src\Concurrency\Readme.md = Src\Concurrency\Readme.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C.Transaction", "C.Transaction", "{4E4A59FD-3521-4646-9671-97A0DE786C2C}"
 EndProject
