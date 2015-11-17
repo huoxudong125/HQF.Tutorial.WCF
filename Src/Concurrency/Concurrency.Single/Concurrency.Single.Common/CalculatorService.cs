@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace Concurrency.Single.Common
 {
-    [ServiceBehavior(UseSynchronizationContext = false)]
+    [ServiceBehavior(UseSynchronizationContext = false,ConcurrencyMode=ConcurrencyMode.Single)]
     public class CalculatorService : ICalculator
     {
         public double Add(double x, double y)

@@ -173,11 +173,11 @@ namespace SimpleChatRoom.Client.ViewModel
 
         #region Command
 
-        public RelayCommand ConnectCommand { get; }
+        public RelayCommand ConnectCommand { get; private set; }
 
-        public RelayCommand SendCommand { get; }
+        public RelayCommand SendCommand { get; private set; }
 
-        public RelayCommand DisConnectCommand { get; }
+        public RelayCommand DisConnectCommand { get; private set; }
 
         #endregion
 
